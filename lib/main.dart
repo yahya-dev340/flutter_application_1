@@ -15,51 +15,124 @@ class MyApp extends StatelessWidget {
 
 class Home extends StatelessWidget {
   const Home({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          width: 200,
-          height: 300,
-          padding: EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.grey, width: 2),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Categories",
+            style: TextStyle(color: Colors.grey, fontSize: 20),
           ),
-          child: Column(
+          Row(
             children: [
-              Image.asset('images/lemon.jpeg'),
-              Text(
-                "\$1:22",
-                style: TextStyle(fontSize: 10, color: Colors.green),
-              ),
-              Text("Organic lemon", style: TextStyle(fontSize: 12)),
-              Text("4 pic", style: TextStyle(fontSize: 7, color: Colors.grey)),
-
               Container(
-                width: MediaQuery.sizeOf(context).width,
-                height: 30,
-                margin: EdgeInsets.all(16),
-                padding: EdgeInsets.all(2),
-
+                width: 200,
+                height: 250,
+                padding: EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 10, 48, 11),
-                  borderRadius: BorderRadius.circular(12),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.grey, width: 2),
                 ),
-                child: Row(
+
+                child: Column(
                   children: [
-                    Icon(Icons.shopping_bag, color: Colors.white, size: 20),
-                    Text("Add to cart", style: TextStyle(color: Colors.white)),
+                    SizedBox(width: 6),
+                    Image.asset('images/meat.png'),
+                    Text(
+                      "Meat",
+                      style: TextStyle(fontSize: 18, color: Colors.grey),
+                    ),
                   ],
                 ),
               ),
+              Row(
+                children: [
+                  SizedBox(width: 10),
+                  Container(
+                    width: 200,
+                    height: 250,
+                    padding: EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: Colors.grey, width: 2),
+                    ),
+
+                    child: Column(
+                      children: [
+                        Image.asset('images/cake.png'),
+                        Text(
+                          "Cake",
+                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(width: 10),
+                      Container(
+                        width: 200,
+                        height: 250,
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(color: Colors.grey, width: 2),
+                        ),
+
+                        child: Column(
+                          children: [
+                            Image.asset('images/juice.png'),
+                            Text(
+                              "juice",
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(width: 10),
+                          Container(
+                            width: 200,
+                            height: 250,
+                            padding: EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(color: Colors.grey, width: 2),
+                            ),
+
+                            child: Column(
+                              children: [
+                                Image.asset('images/more.png'),
+                                Text(
+                                  "More",
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
-        ),
+        ],
       ),
     );
   }
